@@ -26,7 +26,7 @@ public class DiagonalWinning implements WinningStrategy{
         if(!antiDiagonal.containsKey(c)){
             antiDiagonal.put(c, 0);
         }
-        if(row + col == boardSize){
+        if(row + col == boardSize-1){
             antiDiagonal.put(c, antiDiagonal.get(c)+1);
         }
         return antiDiagonal.get(c);
