@@ -15,8 +15,8 @@ public class Main {
     private static GameController gameController;
     public static void main(String[] args) {
        //0. Get all the details for Game
-        Player p1 = new Player("Mohit", new Symbol('X'), PlayerType.HUMAN);
-        Player p2 = new Player("Rohit", new Symbol('O'), PlayerType.HUMAN);
+        Player p2 = new Player("Shrey", new Symbol('O'), PlayerType.HUMAN);
+        Player p1 = new Player("Ayush", new Symbol('X'), PlayerType.HUMAN);
 
         List<WinningStrategy> winnningStartegies= List.of(new DiagonalWinning(), new RowWinning(), new ColumnWinning());
         //1. Start a game

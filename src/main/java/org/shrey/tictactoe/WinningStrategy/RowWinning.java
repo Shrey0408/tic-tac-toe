@@ -14,13 +14,13 @@ public class RowWinning implements WinningStrategy{
 
     @Override
     public boolean checkWin(Board board, Move move) {
-        int col = move.getCol();
+        int row = move.getRow();
         Character c = move.getPlayer().getSymbol().getCharacter();
-        if(!rowCount.containsKey(col)){
-            rowCount.put(col, new HashMap<>());
+        if(!rowCount.containsKey(row)){
+            rowCount.put(row, new HashMap<>());
         }
 
-        HashMap<Character, Integer> charactersCount = rowCount.get(col);
+        HashMap<Character, Integer> charactersCount = rowCount.get(row);
         if(!charactersCount.containsKey(c)){
             charactersCount.put(c, 0);
         }
